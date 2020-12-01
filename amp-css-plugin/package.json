@@ -29,6 +29,6 @@
 		"@scullyio/scully": "^1.0.5"
 	},
 	"dependencies": {
-		"jsdom": "^4.2.1"
+		"jsdom": "^16.4.0"
 	}
 }
