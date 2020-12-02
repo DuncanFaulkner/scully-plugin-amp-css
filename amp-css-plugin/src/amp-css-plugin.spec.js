@@ -8,6 +8,11 @@ const EXPECTED_HTML = `<!DOCTYPE html><html lang=\"en\"><head>    <title>Test HT
 
 test('it should convert multiple style tags into one style tag', async () => {
 	const newHtml = await combineStylesAmpPlugin(STARTING_HTML, { route: 'test-route' });
+	const dom = new JSDOM(newHtml);
+	const { window } = dom;
+	const { document } = window;
+	const styleTags = document.querySelectorAll('style');
 
 	expect(newHtml).toBe(EXPECTED_HTML);
+	expect(styleTags.length).toBe(1);
 });
