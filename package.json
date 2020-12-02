@@ -14,7 +14,8 @@
 		"release:first": "npm run release -- --first-release",
 		"build:lib": "ng build @scullyio/scully-plugin-amp-css",
 		"test:lib": "ng test @scullyio/scully-plugin-amp-css",
-		"release": "cd projects/scullyio/scully-plugin-amp-css && standard-version --infile ../../../CHANGELOG.md",
+		"build:copy-readme": "cp ./README.md ./amp-css-plugin && cp ./logo.svg ./amp-css-plugin",
+		"release": "cd amp-css-plugin && standard-version --infile ../CHANGELOG.md",
 		"test:lib:headless": "cross-env CI=true npm run test:lib",
 		"scully": "scully",
 		"scully:serve": "scully serve"
