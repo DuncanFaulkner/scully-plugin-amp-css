@@ -9,19 +9,16 @@
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
-[![ngneat](https://img.shields.io/badge/@-ngneat-383636?style=flat-square&labelColor=8f68d4)](https://github.com/ngneat/)
-[![spectator](https://img.shields.io/badge/tested%20with-spectator-2196F3.svg?style=flat-square)]()
 
-> The Library Slogan
+# Scully AMP CSS Plugin
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ipsam iste iure, maxime modi molestiae nihil obcaecati odit officiis pariatur quibusdam suscipit temporibus unde.
-Accusantium aliquid corporis cupiditate dolores eum exercitationem illo iure laborum minus nihil numquam odit officiis possimus quas quasi quos similique, temporibus veritatis? Exercitationem, iure magni nulla quo sapiente soluta. Esse?
+The purpose of the Scully AMP CSS plugin is to take all `style` tags from rendered pages and combine them into a single style tag located in the `head` tag of a given page. This is a requirement for AMP pages given by Google. [This talk here](https://www.loom.com/share/35330a858cd741ba92e8be0c0496ffbb) talks in some part about this requirement. Scully makes this relatively easy because after each page is rendered, a plugin can be run to do something to that page; in this case to combine all the styles into a single `style` tag.
 
 ## Features
 
-- ✅ One
-- ✅ Two
-- ✅ Three
+- ✅ Combines the contents of all `style` tags into a single `style` tag
+- ✅ Puts the combined styles into the document's `head` tag
+- ✅ Removes all the extra `style` tags
 
 ## Table of Contents
 
@@ -41,17 +38,24 @@ Accusantium aliquid corporis cupiditate dolores eum exercitationem illo iure lab
 
 ## Usage
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ipsam iste iure, maxime modi molestiae nihil obcaecati odit officiis pariatur quibusdam suscipit temporibus unde.
+To use this plugin, you need to just require the package inside the Scully `config.ts` for your project, i.e. `scully.your-project-name.config.ts`. After requiring the plugin, add it to the `defaultPostRenderers` array for the desired routes that the plugin should be run on. In most (if not all cases), this would be on all routes, but you need to add it to those routes for it to work.
 
 ```ts
-function helloWorld() {}
+// scully.your-project-name.config.ts
+require('@scullyio/scully-plugin-amp-css');
+
+export const config: ScullyConfig = {
+	projectRoot: './src',
+	projectName: 'your-project-name',
+	outDir: './dist/static',
+	routes: {},
+	defaultPostRenderers: ['combineStylesAmpPlugin'],
+};
 ```
 
-## FAQ
+That's all it takes for the plugin to be included and run on the pages in your app.
 
-## How to ...
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ips
+**_Make sure to run include this plugin before other CSS plugins, like the [critical CSS plugin](https://www.npmjs.com/package/@scullyio/scully-plugin-critical-css)._**
 
 ## Contributors ✨
 
