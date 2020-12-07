@@ -3,7 +3,6 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 
 const combineStylesAmpPlugin = async (html, route) => {
-	console.log(route);
 	try {
 		log(`Combining Styles for ${yellow(route.route)}.`);
 		const dom = new JSDOM(html);
