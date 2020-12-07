@@ -1,5 +1,5 @@
 <p align="center">
- <img width="20%" height="20%" src="./logo.svg">
+ <img width="20%" height="20%" src="https://raw.githubusercontent.com/pjlamb12/scully-plugin-amp-css/main/logo.svg">
 </p>
 
 <br />
