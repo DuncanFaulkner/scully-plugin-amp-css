@@ -1,5 +1,5 @@
 import { HandledRoute, registerPlugin, ScullyConfig } from '@scullyio/scully';
-require('@scullyio/scully-plugin-amp-css');
+require('scully-plugin-amp-css');
 
 export const config: ScullyConfig = {
 	projectRoot: './src',
