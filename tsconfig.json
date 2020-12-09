@@ -16,9 +16,7 @@
 		"target": "es2015",
 		"module": "es2020",
 		"lib": ["es2018", "dom"],
-		"paths": {
-			"@scullyio/scully-plugin-amp-css": ["projects/scullyio/scully-plugin-amp-css/src/public-api.ts"]
-		}
+		"paths": {}
 	},
 	"angularCompilerOptions": {
 		"strictInjectionParameters": true,

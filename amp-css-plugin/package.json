@@ -1,5 +1,5 @@
 {
-	"name": "@scullyio/scully-plugin-amp-css",
+	"name": "scully-plugin-amp-css",
 	"version": "1.0.0",
 	"description": "Scully plugin to combine all style tags in to one",
 	"main": "src/index.js",

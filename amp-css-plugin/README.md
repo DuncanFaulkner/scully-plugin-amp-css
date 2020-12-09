@@ -30,11 +30,11 @@ The purpose of the Scully AMP CSS plugin is to take all `style` tags from render
 
 ### NPM
 
-`npm install @scullyio/scully-plugin-amp-css --save-dev`
+`npm install scully-plugin-amp-css --save-dev`
 
 ### Yarn
 
-`yarn add @scullyio/scully-plugin-amp-css --dev`
+`yarn add scully-plugin-amp-css --dev`
 
 ## Usage
 
@@ -42,7 +42,7 @@ To use this plugin, you need to just require the package inside the Scully `conf
 
 ```ts
 // scully.your-project-name.config.ts
-require('@scullyio/scully-plugin-amp-css');
+require('scully-plugin-amp-css');
 
 export const config: ScullyConfig = {
 	projectRoot: './src',
