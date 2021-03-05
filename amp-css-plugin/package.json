@@ -1,6 +1,6 @@
 {
 	"name": "scully-plugin-amp-css",
-	"version": "2.0.0",
+	"version": "1.0.0",
 	"description": "Scully plugin to combine all style tags in to one",
 	"main": "src/index.js",
 	"author": "pjlamb12",
