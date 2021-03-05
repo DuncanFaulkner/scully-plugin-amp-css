@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/pjlamb12/scully-plugin-amp-css/compare/v1.0.0...v2.0.0) (2021-03-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* **plugin:** Lastest version of scully has been included
+
+### refactor
+
+* **plugin:** update the plugin from render to postProcessByHtml ([0c8e71a](https://github.com/pjlamb12/scully-plugin-amp-css/commit/0c8e71affec4a878d123217353935eada5826fed)), closes [#8](https://github.com/pjlamb12/scully-plugin-amp-css/issues/8)
+
 ## 1.0.0 (2020-12-09)
 
 
